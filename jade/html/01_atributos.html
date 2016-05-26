@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Atributos (jade)</title>
+    <style stylesheet>
+      .verde     {color: green; }
+      .rojo      {color: red;}
+      .morado    {background-color: purple;}
+      .centrar   {text-align: center;}
+      .rayado    {text-decoration: underline;}
+      .active    {color: green;}
+    </style>
+  </head>
+  <body>
+    <h1>Atributos (jade)</h1>
+    <!-- Un solo atributo--><a href="http://:www.google.com">Ir a Google</a>
+    <!-- Varios atributos-->&nbsp; | &nbsp<a href="http://www.yahoo.com" target="_blank" class="link">Ir a Yahoo</a><br><br>
+    <!-- Variable Color-->
+    <!-- Condicional valores de los atributos-->
+    <div class="verde">Color</div><br><br>
+    <!-- Atributos en varias lineas-->
+    <input type="number" min="10" max="99" placeholder="Ingrese un número"><br><br>
+    <!-- Atributos booleanos-->Falso
+    <input type="radio" name="bool" checked="true">Verdadero
+    <input type="radio" name="bool" checked="true"><br><br>
+    <!-- Atributo Style-->
+    <button style="background-color:black;color:white;border:none;padding:10px">Boton</button>
+    <!-- Atributo Class-->
+    <h2 class="morado centrar rayado">ADSI 1132816</h2><br><br>
+    <!-- Sección Actual-->
+    <nav>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/nosotros" class="active">Nosotros</a></li>
+      <li><a href="/servicios">Servicios</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </nav><br><br>
+    <!-- Class e Identificadores Literales-->
+    <div class="morado">Texto</div><br>
+    <div class="morado centrar rayado">División</div><br>
+    <div id="cod1">Texto</div><br>
+    <div id="cod2" class="morado centrar rayado">Texto</div><br><br>
+    <!-- &atributos-->
+    <div class="rojo" data-color="red">Lorem Ipsum</div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Casos (jade)
+    body
+      h1 Casos (jade)
+    
+      - var friends = 10
+  case friends
+      when 0
+        p Tu no tienes amigos 
+      when 1
+        p Tu tienes un amigo
+      when 10
+        p Tu tienes 10 amigos
+      default
+        p Tu tienes #{amigos} amigos

@@ -1,0 +1,68 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Estructura (Semántica)
+    style(rel='stylesheet').
+      body {
+        background-image: url(http://subcultureslist.com/wp-content/uploads/2011/04/heavy_metal.jpg);
+        margin: 0px auto;
+        width 700px
+      }
+      main {
+        background-color: rgba(0,0,0, 0.5);
+        margin: 0px auto;
+        padding: 20px;
+        width: 800px;
+      }
+      header figure{
+        text-align: center;
+      }
+      nav li {
+        background-color: black;
+        color: white;
+        display: inline-block;
+        list-style: none;
+        padding: 20px;
+        text-align: center;
+        width: 156px;
+        transition: all 0.1s ease-in;
+      }
+      nav li:hover, 
+      nav li:hover a{
+        background-color: white;
+        color: black;
+      }
+      nav li a {
+        color: white;
+        display: block;
+        height: 100%;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        width: 100%;
+      }
+  body
+    main
+      header
+        figure
+          img(src='http://dc748.4shared.com/img/eO2lIKZX/s23/1382e7fc1e8/Heavy_Metal_faak_Skull', width='200')
+        nav
+          li: a(href='') Inicio
+          li: a(href='') Bandas
+          li: a(href='') Canciones
+          li: a(href='') Imagenes
+          
+        section
+          article
+          h1 Heavy metal
+          video(controls, poster='imgs/header.png')
+          source(src='video/Psychosocial.mp4', type='video/mp4')
+        
+        aside
+          article
+          h1
+          p
+     footer
+       p

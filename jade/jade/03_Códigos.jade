@@ -1,0 +1,14 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Códigos (jade)
+  body
+    h1 Códigos (jade)
+      - for (var i = 1; i < 25; i++)
+  li suma #{i}
+  -
+   list = ["Cereza", "Manzana", "Sandia","Pera", "Mango", "Guanabana"]
+  br
+  each item in list
+   li= item
