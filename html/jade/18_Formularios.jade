@@ -2,70 +2,70 @@ doctype
 html(lang="es")
   head
     meta(charset="UTF-8")
-    title Secciones tablas
+    title Formulario
   body
-    form(method="past")
+    form(method='post')
       fieldset
-        // Nombres -------------------------------
-        label(for="nombres") Nombre
-        input(type="text", id="nombres")
-        legend Datos de Usuario.
-        
-        // Contraseña ----------------------------
-        label(for="contrasena") Contraseña
-        input(type="password", id="contrasena")
+        legend Datos de Usuario
+        //Nombres
+        label(for='nombres') Nombres
+        input(type='text', id='nombres')
         br
         br
-        // Foto
-        label(for="Foto") Foto
-        input(type="file", id="Foto", accept="imagen/*")
+        //Contraseña
+        label(for='contrasena') Contraseña
+        input(type='password', id='contrasena')
         br
         br
-        // Lenguaje de Programacion -------------
-        label(for="Lenguajes") Lenguajes Programacion
+        //Foto
+        label(for='foto') Subir Archivo
+        input(type='file', id='foto', accept='image/*')
         br
         br
-        Label PHP
-          input(type="checkbox", name="Lenguajes", value="PHP")
+        //Lenguajes de Programación
+        label(for='lenguajes') Lenguajes Programación
+        br
+        label PHP
+          input(type='checkbox', name='lenguajes', value='PHP')
         label Java
-          input(type="checkbox", name="Lenguajes", value="Java")
+          input(type='checkbox', name='lenguajes', value='Java')
         label C#
-          input(type="checkbox", name="Lenguajes", value="C#")
+          input(type='checkbox', name='lenguajes', value='C#')
         br
         br
-        // NAcionalidad
+        //Nacionalidad
         label Nacionalidad
         br
         label Colombia
-          input(type="radio", name="nacionalidad", value="Colombia")
-        label Venezuela
-           input(type="radio", name="nacionalidad", value="Venezuela")
-        label Ecuador 
-           input(type="radio", name="nacionalidad", value="Ecuador")
-           br
-           br
-        // Genero---------------------------------
-        label(for="genero") Genero
-        select
+          input(type='radio', name='nacionalidad', value='Colombia')
+        label Venezuela  
+          input(type='radio', name='nacionalidad', value='Venezuela')
+        label Ecuador  
+          input(type='radio', name='nacionalidad', value='Ecuador')
+        br
+        br
+        //Género
+        label(for='genero') Género
+        select(id='genero')
           option Seleccione...
-          option(value="F") Femenino
-          option(value="M") Masculino
+          option(value='F') Femenino
+          option(value='M') Masculino
         br
         br
-        // Deporte
-        label(for="Deportes") Deportes
-        select(multiple="multiple", id="deporte")
-          option(value="1") Futbol
-          option(value="2") Baloncesto
-          option(value="3") Tennis
-          option(value="4") Natacion
+        //Deporte
+        label(for='deporte') Deporte
+        select(multiple='multiple', id='deporte')
+           option(value='1') Fútbol
+           option(value='2') Baloncesto
+           option(value='3') Tennis
+           option(value='4') Natación
         br
         br
-        // Descripcion---------------------------- 
-        label(for="Descripcion") Descripcion
-        textarea(id="Descripcion", cols='40', rows='6')
+        //Descripción
+        label(for='descripcion') Descripción
+        textarea(id='descripcion' cols='40' rows='6')
         br
         br
         // Botones
-        input(type="submit", value="Enviar Datos")
-        input(type="reset", vale="Reiniciar Formulario")
+        input(type='submit', value='Enviar Datos')
+        input(type='reset', value='Reiniciar Formulario')

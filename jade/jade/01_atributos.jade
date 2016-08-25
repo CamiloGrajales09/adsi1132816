@@ -4,77 +4,79 @@ html(lang="es")
     meta(charset="UTF-8")
     title Atributos (jade)
     style(stylesheet).
-      .verde     {color: green; }
-      .rojo      {color: red;}
-      .morado    {background-color: purple;}
-      .centrar   {text-align: center;}
-      .rayado    {text-decoration: underline;}
-      .active    {color: green;}
+      .verde { color: green; }
+      .rojo { color: red; }
+      .amarillo { background-color: yellow; }
+      .centrar { text-align: center; }
+      .negrita { font-weight: bold; }
+      .rayado { text-decoration: line-through; }
+      .fuente { font-family: Calibri; }
+      .active { background-color: green; color: lime; }
   body
     h1 Atributos (jade)
-    // Un solo atributo
-    a(href="http://:www.google.com") Ir a Google
-    // Varios atributos
-    | &nbsp; | &nbsp
-    a(href="http://www.yahoo.com", target="_blank", class= "link") Ir a Yahoo
-    br
-    br
-    // Variable Color
+    //Un solo atributo
+    a(href='http://www.google.com') Ir a Google
+    | &nbsp | &nbsp
+    //Varios atributos
+    a(href='http://www.co.yahoo.com', target='_blank', class='link') Ir a Yahoo
+    //Variable
     - var color = true
-    // Condicional valores de los atributos
-    div(class=color? "verde" : "rojo") Color
     br
     br
-    // Atributos en varias lineas
+    //Condicionar valores de los atributos
+    div(class=color ? 'verde' : 'rojo' ) Color
+    br
+    br
+    //Atributos en varias lineas
     input(
-      type="number"
-      min="10"
-      max="99"
-      placeholder="Ingrese un número"
+      type='number'
+      min='10'
+      max='99'
+      placeholder='Ingrese'
     )
     br
     br
-    // Atributos booleanos
+    //Atributos Booleanos 
     | Falso
     input(
-      type="radio"
-      name="bool"
-      checked = "true"
+      type='radio'
+      name='bool'
+      checked = 'false'
     )
     | Verdadero
     input(
-      type="radio"
-      name="bool"
-      checked = "true"
+      type='radio'
+      name='bool'
+      checked=true
     )
     br
     br
-    // Atributo Style
-    button(style={"background-color": "black", color:"white", border: "none", padding: "10px" }) Boton
+    //Atributo Style
+    button(style={'background-color': 'crimson', color: 'white', border: 'none', padding: '10px'}) Boton
     // Atributo Class
-    -var misclasses = ["morado", "centrar", "rayado"]
-    h2(class=misclasses) ADSI 1132816
+    - var misclases = ['amarillo', 'centrar', 'negrita', 'rayado', 'fuente']
+    h2(class=misclases) ADSI 1132816
     br
     br
-    // Sección Actual
-    -var actual = "/nosotros"
+    //Sección Actual
+    - var actual = '/nosotros'
     nav
-      li: a(class={active: actual === "/"}         href="/") Inicio
-      li: a(class={active: actual === "/nosotros"} href="/nosotros") Nosotros
-      li: a(class={active: actual === "/sosotros"} href="/servicios") Servicios
-      li: a(class={active: actual === "/contacto"} href="/contacto") Contacto
+      li: a(class={active: actual === '/'} href='/') Inicio
+      li: a(class={active: actual === '/nosotros'} href='/nosotros') Nosotros
+      li: a(class={active: actual === '/servicios'} href='/servicios') Servicios
+      li: a(class={active: actual === '/contacto'} href='/contacto') Contacto
+    br 
     br
+    //Clases e Identificadores Literales
+    .amarillo Texto
     br
-    // Class e Identificadores Literales
-    .morado Texto
-    br
-    .morado.centrar.rayado División
+    .amarillo.centrar.rayado Texto
     br
     #cod1 Texto
     br
-    #cod2.morado.centrar.rayado Texto
+    #cod1.amarillo.centrar.rayado Texto
     br
     br
-    // &atributos
-    - var atributos = {"data-color": "red"};
-      div(class="rojo")&attributes(atributos) Lorem Ipsum
+    // &attributes
+    -var atributos = {'data-color': 'red'};
+      div(classs="rojo")&attributes(atributos) Lorem Ipsum

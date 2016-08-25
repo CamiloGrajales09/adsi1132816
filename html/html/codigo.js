@@ -1,8 +1,11 @@
 
-var nombre= prompt("Cuál es su nombre");
+var nombre = prompt('Cuál es su nombre?');
 
-if(nombre == "Camilo") {
-	alert("Bienvenido: "+nombre+" Gamer ");
-} else {
-    alert("Bienvenido: "+nombre+"  Pro ");
+if (nombre == 'camilo') 
+{
+	alert('Bienvenido: '+nombre+' el aprendiz');
+} 
+else 
+{
+	alert('Bienvenido: '+nombre+' usuario');
 }

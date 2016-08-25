@@ -1,0 +1,17 @@
+nav {
+	display: inline-block;
+}
+nav li{
+	background-color: #B71EE9;
+	display: inline-block;
+	height: 72px;
+	text-align: center;
+	width: 100px;
+	}
+nav li:hover {
+	background-color: #0CB9DE;
+}
+	
+nav li.dnt2:hover{
+	transform: scale(2);
+}	

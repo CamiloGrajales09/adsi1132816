@@ -3,16 +3,13 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     title Casos (jade)
-    body
-      h1 Casos (jade)
-    
-      - var friends = 10
-  case friends
+  body
+    h1 Casos (jade)
+    - var amigos = 0
+    case amigos
       when 0
-        p Tu no tienes amigos 
+        p Usted no tiene amigos
       when 1
-        p Tu tienes un amigo
-      when 10
-        p Tu tienes 10 amigos
+        p Usted tiene un amigo
       default
-        p Tu tienes #{amigos} amigos
+        p Usted tiene #{amigos} amigos
